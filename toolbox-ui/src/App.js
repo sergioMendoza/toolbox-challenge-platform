@@ -1,23 +1,17 @@
-import logo from './logo.svg';
-import './App.css';
+import logo from "./logo.svg";
+import "./App.css";
+import FileDataList from "./components/fileDataList";
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
+      <nav className="navbar navbar-expand bg-danger">
+        <a href="/" className="navbar-brand App-link p-2">
+          Toolbox Challenge React App
         </a>
-      </header>
+      </nav>
+
+      <FileDataList />
     </div>
   );
 }
