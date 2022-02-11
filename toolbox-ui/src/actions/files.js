@@ -13,9 +13,9 @@ export const retrieveFilesData = () => async (dispatch) => {
     }
   };
 
-  export const findFileDataByName = (title) => async (dispatch) => {
+  export const findFileDataByName = (filename) => async (dispatch) => {
     try {
-      const res = await FileService.findByName(title);
+      const res = await FileService.findByName(filename);
       dispatch({
         type: RETRIEVE_FILE_DATA,
         payload: res.data,

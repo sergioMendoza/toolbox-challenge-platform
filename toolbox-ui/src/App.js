@@ -1,4 +1,4 @@
-import logo from "./logo.svg";
+import React from "react";
 import "./App.css";
 import FileDataList from "./components/fileDataList";
 
@@ -10,8 +10,9 @@ function App() {
           Toolbox Challenge React App
         </a>
       </nav>
-
-      <FileDataList />
+      <React.StrictMode>
+        <FileDataList />
+      </React.StrictMode>
     </div>
   );
 }

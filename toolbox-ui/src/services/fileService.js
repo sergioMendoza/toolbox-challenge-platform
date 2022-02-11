@@ -2,8 +2,8 @@ import http from "../http-common";
 const getAll = () => {
   return http.get("/files/data");
 };
-const findByName = title => {
-  return http.get(`/files/data?title=${title}`);
+const findByName = fileName => {
+  return http.get(`/files/data?fileName=${fileName}`);
 };
 const FileService = {
   getAll, 

@@ -12,15 +12,15 @@ import Button from "react-bootstrap/Button";
 const FileDataList = () => {
   const [currentFileData, setCurrentFileData] = useState(null);
   const [currentIndex, setCurrentIndex] = useState(-1);
-  const [searchTitle, setSearchTitle] = useState("");
+  const [searchTitle, setSearchFile] = useState("");
   const files = useSelector((state) => state.files);
   const dispatch = useDispatch();
   useEffect(() => {
     dispatch(retrieveFilesData());
   }, []);
-  const onChangeSearchTitle = (e) => {
-    const searchTitle = e.target.value;
-    setSearchTitle(searchTitle);
+  const onChangeSearchFile = (e) => {
+    const searchFile= e.target.value;
+    setSearchFile(searchFile);
   };
   const refreshData = () => {
     setCurrentFileData(null);
@@ -44,8 +44,10 @@ const FileDataList = () => {
               placeholder="filename"
               aria-label="filename"
               aria-describedby="basic-addon2"
+              value={searchTitle}
+              onChange={onChangeSearchFile}
             />
-            <Button variant="outline-secondary" id="button-addon2">
+            <Button onClick={findByName} variant="outline-secondary" id="button-addon2">
               Buscar
             </Button>
           </InputGroup>
