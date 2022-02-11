@@ -8,7 +8,8 @@
     "start": "node server.js",
     "dev": "standard --fix && node server.js",
     "lint": "standard",
-    "fix": "standard --fix"
+    "fix": "standard --fix",
+    "test": "mocha --require esm"
   },
   "keywords": [],
   "author": "",
@@ -17,11 +18,16 @@
     "axios": "^0.25.0",
     "cors": "^2.8.5",
     "dotenv": "^16.0.0",
+    "esm": "^3.2.25",
     "express": "^4.17.2"
   },
   "devDependencies": {
     "chai": "^4.3.6",
+    "chai-http": "^4.3.0",
     "mocha": "^9.2.0",
     "standard": "^16.0.4"
+  },
+  "standard": {
+    "globals": ["should","describe", "it"]
   }
 }

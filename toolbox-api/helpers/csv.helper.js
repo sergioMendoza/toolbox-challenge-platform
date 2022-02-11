@@ -1,7 +1,8 @@
 export default function csvJSON (csvStr) {
+  let obj = {}
   const headerCSV = ['file', 'text', 'number', 'hex']
   const rowsData = csvStr.split('\n')
-  let obj = null
+
   if (rowsData.length > 1) {
     const headers = rowsData[0].split(',')
     if (JSON.stringify(headerCSV) === JSON.stringify(headers)) {
